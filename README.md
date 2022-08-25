@@ -25,6 +25,7 @@ STEP 1: build and install TbApi
 STEP 2: create sample app -> sample.py
 --------------------------------------
   [1.] cd ..
+  
   [2.] nano sample.py
   
   Sample Code: 
