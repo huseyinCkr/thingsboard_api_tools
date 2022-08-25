@@ -17,7 +17,9 @@ This code is utterly untested, but will get you pointed in the right direction.
 STEP 1: build and install TbApi
 -------------------------------
   cd thingsboard_api_tools
+  
   python setup.py build     //will build the package underneath 'build/'
+  
   python setup.py install   // will install the package
 
 STEP 2: create sample app -> sample.py
