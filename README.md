@@ -16,18 +16,18 @@ This code is utterly untested, but will get you pointed in the right direction.
 
 STEP 1: build and install TbApi
 -------------------------------
-  cd thingsboard_api_tools
+  [1.] cd thingsboard_api_tools
   
-  python setup.py build     //will build the package underneath 'build/'
+  [2.] python setup.py build     //will build the package underneath 'build/'
   
-  python setup.py install   // will install the package
+  [3.] python setup.py install   // will install the package
 
 STEP 2: create sample app -> sample.py
 --------------------------------------
-  cd ..
-  nano sample.py
+  [1.] cd ..
+  [2.] nano sample.py
   
-  Sample Code:
+  Sample Code: 
   ------------
 	from thingsboard_api_tools import TbApi
 	mothership_url = "http://127.0.0.1:8080"
@@ -36,6 +36,7 @@ STEP 2: create sample app -> sample.py
 
 	tbapi = TbApi(mothership_url, thingsboard_username, thingsboard_password)
 
+    //GET ID FROM Thingsboard GUI http://18.197.31.18:8080/devices -> select your device ->c Copy Device ID
 	latest_temp = tbapi.get_latest_telemetry("4f578fa0-22ef-11ed-b503-d7bb887165a6", "temperature")
 
 	print(latest_temp.items())
@@ -47,6 +48,7 @@ STEP 2: create sample app -> sample.py
    STEP 4: run python sample.py
    ----------
    OUTPUT:
+   
    dict_items([('temperature', [{'ts': 1661356138897, 'value': '5269'}, 
    {'ts': 1661356108742, 'value': '31352'}, {'ts': 1661356078558, 'value': '28595'},
    {'ts': 1661356048371, 'value': '23872'}, {'ts': 1661356018212, 'value': '18321'}, 
